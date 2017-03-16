@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Нефтеполис</title>
+  <meta name="description" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Template Basic Images Start -->
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72"
+        href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114"
+        href="img/favicon/apple-touch-icon-114x114.png">
+  <!-- Template Basic Images End -->
+
+  <!-- First downloaded Styles Only -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    .wrapper {
+      display: table;
+      height: 100%;
+    }
+
+    .wrapperWithoutFooter {
+      display: table-row;
+      height: 100%;
+    }
+
+    .preloader{
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: rgba(0,0,0, .9);
+    }
+
+    .preloader__img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      max-width: 400px;
+    }
+
+  </style>
+
+  <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+  <script>!function (e) {
+    "use strict";
+    function t(e, t, n) {
+      e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+    };
+    function n(t, n) {
+      return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+    };
+    function a(t, a) {
+      if (e.localStorage && e.XMLHttpRequest)n(t, a) ? o(localStorage[t + "_content"]) : l(t, a); else {
+        var s = r.createElement("link");
+        s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+      }
+    }
+
+    function l(e, t) {
+      var n = new XMLHttpRequest;
+      n.open("GET", t, !0), n.onreadystatechange = function () {
+        4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+      }, n.send()
+    }
+
+    function o(e) {
+      var t = r.createElement("style");
+      t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+    }
+
+    var r = e.document;
+    e.loadCSS = function (e, t, n) {
+      var a, l = r.createElement("link");
+      if (t)a = t; else {
+        var o;
+        o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+      }
+      var s = r.styleSheets;
+      l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+      var c = function (e) {
+        for (var t = l.href, n = s.length; n--;)if (s[n].href === t)return e();
+        setTimeout(function () {
+          c(e)
+        })
+      };
+      return l.onloadcssdefined = c, c(function () {
+        l.media = n || "all"
+      }), l
+    }, e.loadLocalStorageCSS = function (l, o) {
+      n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+        a(l, o)
+      })
+    }
+  }(this);</script>
+
+  <!-- Load Fonts CSS Start -->
+  <script>
+    loadCSS("css/fonts.css?ver=1.0.0", false, "all"); // Loading fonts, if the site is located in a subfolder
+    // loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+  </script>
+  <!-- Load Fonts CSS End -->
+
+  <!-- Load Custom CSS Start -->
+  <script>loadCSS("css/main.css?ver=1.0.0", false, "all");</script>
+  <!-- Load Custom CSS End -->
+
+  <!-- Load Custom CSS Compiled without JS Start -->
+  <noscript>
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </noscript>
+  <!-- Load Custom CSS Compiled without JS End -->
+
+  <!-- Custom Browsers Color Start -->
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+  <!-- Custom Browsers Color End -->
+</head>
+
+<body>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN PRELOADER
+-->
+<div class="preloader">
+  <img src="img/content/preloader.gif" alt="Ожидание загрузки"
+       class="preloader__img">
+  <!-- /.preloader__img -->
+</div>
+<!--
+  END PRELOADER
+============================================================================-->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN SVG
+-->
+
+<svg xmlns:xlink="http://www.w3.org/1999/xlink"
+     display="none"
+     visibility = 'hidden'
+     xmlns="http://www.w3.org/2000/svg">
+
+  <symbol
+      id="svg1"
+      viewBox="0 0 46.000000 46.000000"
+      preserveAspectRatio="xMidYMid meet">
+    <g transform="translate(0.000000,46.000000) scale(0.050000,-0.050000)"
+       fill="#000000" stroke="none">
+      <path d="M360 902 c-276 -58 -427 -362 -312 -632 162 -382 767 -329 851 76 72
+344 -201 626 -539 556z m224 -158 c40 -40 -12 -71 -139 -80 -198 -14 -334 46
+-211 93 72 28 318 19 350 -13z m-194 -104 c73 0 150 9 171 21 34 18 39 14 39
+-30 0 -67 -52 -91 -197 -91 -162 0 -223 25 -223 90 0 45 5 49 39 31 21 -12 98
+-21 171 -21z m-32 -135 l100 -15 -36 -48 c-60 -78 -229 -40 -238 55 -6 60 -3
+64 33 44 22 -11 85 -28 141 -36z m359 6 c118 -61 135 -203 35 -303 -84 -84
+-182 -92 -262 -23 -176 151 20 433 227 326z m-376 -131 c52 0 59 -7 59 -60 0
+-67 -22 -73 -145 -39 -65 18 -75 29 -75 79 0 55 3 58 51 40 29 -11 78 -20 110
+-20z"/>
+      <path
+          d="M571 441 c-45 -49 -29 -96 38 -113 28 -7 51 -25 51 -40 0 -35 -73
+-37 -86 -3 -5 14 -16 18 -25 9 -9 -8 3 -35 27 -59 l44 -44 43 43 c51 51 39 99
+-32 126 -67 25 -67 68 -1 55 55 -10 63 4 26 41 -33 33 -44 30 -85 -15z"/>
+    </g>
+  </symbol>
+
+
+  <symbol
+      id="svg2"
+      viewBox="0 0 46.000000 46.000000"
+      preserveAspectRatio="xMidYMid meet">
+    <g transform="translate(0.000000,46.000000) scale(0.050000,-0.050000)"
+       fill="#000000" stroke="none">
+      <path d="M354 899 c-519 -126 -428 -885 106 -885 269 0 444 176 444 448 0 302
+-258 507 -550 437z m226 -149 c0 -27 -10 -50 -21 -50 -12 0 -15 -10 -8 -21 9
+-14 25 -11 48 10 45 40 67 39 108 -6 30 -33 31 -40 4 -62 -27 -22 -27 -30 -1
+-68 72 -101 12 -300 -108 -362 -323 -167 -564 282 -254 471 34 21 51 38 37 38
+-14 0 -25 23 -25 50 0 47 6 50 110 50 104 0 110 -3 110 -50z"/>
+      <path d="M364 627 c-214 -106 -135 -427 106 -427 247 0 323 338 97 433 -84 35
+-122 34 -203 -6z m196 -37 c151 -78 133 -296 -28 -349 -221 -73 -361 237 -156
+348 70 38 112 38 184 1z"/>
+      <path d="M360 530 c-140 -149 79 -360 224 -215 93 93 19 265 -114 265 -41 0
+-79 -17 -110 -50z m138 -85 c1 -14 -13 -25 -30 -25 -24 0 -29 12 -21 45 7 25
+13 59 15 75 2 30 32 -49 36 -95z"/>
+    </g>
+  </symbol>
+
+  <symbol
+      id="svg3"
+      viewBox="0 0 46.000000 46.000000"
+      preserveAspectRatio="xMidYMid meet">
+
+    <g transform="translate(0.000000,46.000000) scale(0.050000,-0.050000)"
+       fill="#000000" stroke="none">
+      <path d="M354 899 c-519 -126 -428 -885 106 -885 269 0 444 176 444 448 0 302
+-258 507 -550 437z m271 -190 l75 -13 0 -196 0 -196 -72 -63 c-142 -125 -184
+-123 -333 15 -53 49 -55 60 -55 246 l0 194 78 14 c43 7 95 25 114 39 30 22 43
+22 77 0 23 -14 75 -32 116 -40z"/>
+      <path d="M379 661 l-91 -29 -3 -119 c-6 -219 127 -344 266 -250 80 55 109 125
+109 265 l-1 102 -94 30 c-84 26 -106 27 -186 1z m203 -151 c-33 -39 -76 -98
+-93 -133 l-32 -61 -58 67 c-31 37 -58 74 -58 82 -1 22 55 18 69 -5 8 -12 47 9
+95 50 109 93 159 93 77 0z"/>
+    </g>
+  </symbol>
+
+
+</svg>
+
+<!--
+  END SVG
+============================================================================-->
+
+
+<!-- Custom HTML -->
+
+
+<div class="wrapper">
+
+  <div class="wrapperWithoutFooter">
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN NAVIGATION
+-->
+    <div class="wrapNav clearfix">
+
+      <button class="mobileNav">
+        Меню
+      </button>
+      <!-- /.mobileNav -->
+
+      <nav class="nav nav--top center">
+        <a href="#" class="nav__item nav__item--top">
+          Главная
+        </a>
+        <!-- /.nav__item -->
+        <a href="#essays" class="nav__item nav__item--top">
+          Текст
+        </a>
+        <!-- /.nav__item -->
+        <a href="#catalogue" class="nav__item nav__item--top">
+          Списки
+        </a>
+        <!-- /.nav__item -->
+        <a href="#banks" class="nav__item nav__item--top">
+          Таблицы
+        </a>
+        <!-- /.nav__item -->
+      </nav>
+      <!-- /.nav -->
+
+    </div>
+    <!-- /.wrapNav -->
+<!--
+  END NAVIGATION
+============================================================================-->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN BENEFITS
+-->
+    <div class="wrapBenefits">
+      <div class="benefits center">
+        <div class="benefits__item">
+
+          <div class="benefits__wrapSvg">
+            <svg class="benefits__svg" visibility="hidden">
+              <use xlink:href='#svg1'/>
+            </svg>
+            <!-- /.benefits__svg -->
+          </div>
+          <!-- /.benefits__wrapSvg -->
+
+          <p class="benefits__text">
+            Низкие комиссии по переводам внутри России, в СНГ,
+            Грузию и страны дальнего зарубежья.
+          </p>
+          <!-- /.benefits__text -->
+
+        </div>
+        <!-- /.benefits__item -->
+
+        <div class="benefits__item">
+
+          <div class="benefits__wrapSvg">
+            <svg class="benefits__svg" visibility="hidden">
+              <use xlink:href='#svg2'/>
+            </svg>
+            <!-- /.benefits__svg -->
+          </div>
+          <!-- /.benefits__wrapSvg -->
+
+          <p class="benefits__text">
+            Оформление перевода занимает всего несколько минут, а при
+            использовании Карты Клиента ЮНИСТРИМ перевод оформляется еще
+            быстрее. Перевод доступен для получения через 1 минуту после его
+            отправления.
+          </p>
+          <!-- /.benefits__text -->
+
+        </div>
+        <!-- /.benefits__item -->
+
+        <div class="benefits__item">
+
+          <div class="benefits__wrapSvg">
+            <svg class="benefits__svg" visibility="hidden">
+              <use xlink:href='#svg3'/>
+            </svg>
+            <!-- /.benefits__svg -->
+          </div>
+          <!-- /.benefits__wrapSvg -->
+
+          <p class="benefits__text">
+            Полная конфиденциальность вашего перевода гарантируется законом «О
+            банковской тайне».
+          </p>
+          <!-- /.benefits__text -->
+
+        </div>
+        <!-- /.benefits__item -->
+      </div>
+      <!-- /.benefits -->
+    </div>
+    <!-- /.wrapBenefits -->
+<!--
+  END BENEFITS
+============================================================================-->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN MAIN
+-->
+    <div class="wrapMain">
+
+      <section class="options center">
+
+        <h2 class="blockTitle">
+          Возможности:
+        </h2>
+        <!-- /.blockTitle -->
+
+        <div class="wrapSlider">
+
+          <div class="sliderTopControls">
+
+            <div class="sliderLine">
+
+              <div class="sliderLine__triangle"></div>
+              <!-- /.sliderLine__triangle -->
+
+              <div class="sliderLine__circle
+                          sliderLine__circle--1
+                          sliderLine__circle--active ">
+
+              </div>
+              <!-- /.sliderLine__circle -->
+              <div class="sliderLine__circle sliderLine__circle--2"></div>
+              <!-- /.sliderLine__circle -->
+              <div class="sliderLine__circle sliderLine__circle--3"></div>
+              <!-- /.sliderLine__circle -->
+              <div class="sliderLine__circle sliderLine__circle--4"></div>
+              <!-- /.sliderLine__circle -->
+
+            </div>
+            <!-- /.sliderLine -->
+
+          </div>
+          <!-- /.sliderTopControls -->
+
+          <div class="slider">
+            <div class="slide">
+
+              1 текст слайда 1 текст слайда 1 текст слайда
+
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              2 текст слайда 2 текст слайда 2 текст слайда
+              2 текст слайда 2 текст слайда 2 текст слайда
+
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              3 текст слайда 3 текст слайда 3 текст слайда
+
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              4 текст слайда 4 текст слайда 4 текст слайда
+              4 текст слайда 4 текст слайда 4 текст слайда
+              4 текст слайда 4 текст слайда 4 текст слайда
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              5 текст слайда 5 текст слайда 5 текст слайда
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              6 текст слайда 6 текст слайда 6 текст слайда
+              6 текст слайда 6 текст слайда 6 текст слайда
+              6 текст слайда 6 текст слайда 6 текст слайда
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              7 текст слайда 7 текст слайда 7 текст слайда
+              7 текст слайда 7 текст слайда 7 текст слайда
+              7 текст слайда 7 текст слайда 7 текст слайда
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              8 текст слайда 8 текст слайда 8 текст слайда
+              8 текст слайда 8 текст слайда 8 текст слайда
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              9 текст слайда 9 текст слайда 9 текст слайда
+              9 текст слайда 9 текст слайда 9 текст слайда
+              9 текст слайда 9 текст слайда 9 текст слайда
+              9 текст слайда 9 текст слайда 9 текст слайда
+
+            </div>
+            <!-- /.slide -->
+            <div class="slide">
+
+              10 текст слайда 10 текст слайда 10 текст слайда
+
+            </div>
+            <!-- /.slide -->
+          </div>
+          <!-- /.slider -->
+
+        </div>
+        <!-- /.wrapSlider -->
+
+      </section>
+      <!-- /.options -->
+
+      <section class="essays center" id="essays">
+
+        <h1 class="titleH1">
+          О компании
+        </h1>
+        <!-- /.titleH1 -->
+
+        <article class="article">
+
+          <h2 class="article__title">
+            Рейтинги компании
+          </h2>
+          <!-- /.title -->
+
+          <div class="article__description">
+            <p class="article__paragraph">
+              28 октября международное рейтинговое агентство Standard & Poor`s
+              объявило о присвоении долгосрочного рейтинга финансовой
+              устойчивости и кредитного рейтинга контрагентов «B-»
+            </p>
+            <!-- /.article__paragraph -->
+            <p class="article__paragraph">
+              по международной шкале с прогнозом «Стабильный» и рейтинга
+              финансовой устойчивости по национальной шкале «ru BBB-» страховой
+              компании
+            </p>
+            <!-- /.article__paragraph -->
+          </div>
+          <!-- /.article__description -->
+
+        </article>
+        <!-- /.article -->
+
+        <article class="article">
+
+          <h2 class="article__title">
+            Региональные развитие
+          </h2>
+          <!-- /.title -->
+
+          <div class="article__description">
+            <p class="article__paragraph">
+              «Нефтеполис» позиционирует себя как крупная федеральная компания с
+              разветвленной филиальной сетью. В настоящее время из девяти
+              филиалов четыре работают на Дальнем Востоке, где находятся
+              стратегические интересы компании, так как Дальневосточный регион
+              является одним из самых инвестиционно привлекательных. Здесь
+              происходит бурное развитие целого ряда перспективных проектов в
+              сфере добычи углеводородов.
+            </p>
+            <!-- /.article__paragraph -->
+          </div>
+          <!-- /.article__description -->
+
+        </article>
+        <!-- /.article -->
+
+      </section>
+      <!-- /.article -->
+
+      <section class="opinions center">
+
+        <h2 class="blockTitle">
+          Отзывы:
+        </h2>
+        <!-- /.blockTitle -->
+
+        <div class="opinions__part">
+
+          <div class="opinions__wrapImg">
+            <img src="img/content/opinion_man_1.jpg"
+                 alt="Человек с отзывом"
+                 class="opinions__img">
+            <!-- /.opinions__img -->
+          </div>
+          <!-- /.opinions__wrapImg -->
+
+          <div class="opinions__text opinionReview">
+
+            <p class="opinionReview__part">
+              <span class="opinionReview__title">
+                Достоинства:
+              </span>
+              <!-- /.opinionReview__title -->
+              низкие комиссии
+            </p>
+            <!-- /.opinionReview__part -->
+
+            <p class="opinionReview__part">
+              <span class="opinionReview__title">
+                Недостатки:
+              </span>
+              <!-- /.opinionReview__title -->
+              Могло бы быть и попроще оформление
+            </p>
+            <!-- /.opinionReview__part -->
+
+          </div>
+          <!-- /.opinions__text -->
+
+        </div>
+        <!-- /.opinions__part -->
+
+        <div class="opinions__part">
+
+          <div class="opinions__wrapImg">
+            <img src="img/content/opinion_man_2.jpg"
+                 alt="Человек с отзывом"
+                 class="opinions__img">
+            <!-- /.opinions__img -->
+          </div>
+          <!-- /.opinions__wrapImg -->
+
+          <div class="opinions__text opinionReview">
+
+            <p class="opinionReview__part">
+              <span class="opinionReview__title">
+                Достоинства:
+              </span>
+              <!-- /.opinionReview__title -->
+              быстро, надежно, безопасно, рядом
+            </p>
+            <!-- /.opinionReview__part -->
+
+            <p class="opinionReview__part opinionReview__part--minus">
+              <span class="opinionReview__title">
+                Недостатки:
+              </span>
+              <!-- /.opinionReview__title -->
+              Нет
+            </p>
+            <!-- /.opinionReview__part -->
+
+            <p class="opinionReview__part">
+              Поделюсь свежими впечатлениями о денежных переводах через Blitz.
+              Начну с того, что примерно год назад я завела электронный кошелек
+              на Веб Мани. Первые начинания на кликовых сайтах - копеечная
+              прибыль, которая так радовала ))...
+            </p>
+            <!-- /.opinionReview__part -->
+
+          </div>
+          <!-- /.opinions__text -->
+
+        </div>
+        <!-- /.opinions__part -->
+
+      </section>
+      <!-- /.opinions -->
+
+      <section class="catalogue center" id="catalogue">
+
+        <h2 class="catalogue__title">
+          Наши преимущества перед другими страховыми компаниями
+        </h2>
+        <!-- /.catalogue__title -->
+
+        <ul class="catalogueList">
+          <li class="catalogueList__item">
+            <span class="catalogueList__span">
+              надежность
+            </span>
+            <!-- /.catalogueList__span -->
+          </li>
+          <!-- /.catalogueList__item -->
+          <li class="catalogueList__item">
+            <span class="catalogueList__span">
+              уверенность
+            </span>
+            <!-- /.catalogueList__span -->
+          </li>
+          <!-- /.catalogueList__item -->
+          <li class="catalogueList__item">
+            <span class="catalogueList__span">
+              качество
+            </span>
+            <!-- /.catalogueList__span -->
+          </li>
+          <!-- /.catalogueList__item -->
+        </ul>
+        <!-- /.catalogueList -->
+
+        <h2 class="catalogue__title">
+          Для отправки денежного перевода отправителю необходимо
+        </h2>
+        <!-- /.catalogue__title -->
+
+        <ol class="catalogueNumberList">
+
+          <li class="catalogueNumberList__item">
+             Предъявить сотруднику Банка документ, удостоверяющий личность
+          </li>
+          <!-- /.catalogueNumberList__item -->
+          <li class="catalogueNumberList__item">
+            Выбрать пункт выдачи перевода и назвать ФИО получателя
+          </li>
+          <!-- /.catalogueNumberList__item -->
+          <li class="catalogueNumberList__item">
+            Внести сумму перевода и оплатить комиссию1 за осуществление перевода
+            в кассе Банка
+          </li>
+          <!-- /.catalogueNumberList__item -->
+          <li class="catalogueNumberList__item">
+            Сообщить получателю
+            <ol class="catalogueNumberListL2">
+              <li class="catalogueNumberListL2__item">
+                код перевода, сумму и валюту перевода, если перевод безадресный
+              </li>
+              <!-- /.catalogueNumberListL2__item -->
+              <li class="catalogueNumberListL2__item">
+                номер перевода и адрес офиса банка, где его можно получить,
+                если перевод адресный
+              </li>
+              <!-- /.catalogueNumberListL2__item -->
+            </ol>
+            <!-- /.catalogueNumberListL2 -->
+          </li>
+          <!-- /.catalogueNumberList__item -->
+
+        </ol>
+        <!-- /.catalogueNumberList -->
+
+
+      </section>
+      <!-- /.catalogue -->
+
+      <section class="banks center" id="banks">
+
+        <h2 class="banks__title center">
+          Банкоматы и отделения
+        </h2>
+        <!-- /.banks__title -->
+
+        <div class="wrapTable">
+          <table class="banks__office">
+            <thead>
+            <tr>
+              <th>Адрес</th>
+              <th>Режим работы</th>
+              <th>Валюта</th>
+              <th>Услуги</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>им. Маршала Ерёменко ул., д. 12 к.5</td>
+              <td>ежедневно, круглосуточно</td>
+              <td>RUB</td>
+              <td>Выдача наличных, Платежи</td>
+            </tr>
+            <tr>
+              <td>Ленина проспект, д. 10 (Терминал)</td>
+              <td>пн.-пт.: 9.00-19.30; сб.:9.00-14.30; вс.: выходной</td>
+              <td>EUR, RUB, USD</td>
+              <td>Выдача наличных</td>
+            </tr>
+            <tr>
+              <td>Ленина проспект, д. 4</td>
+              <td>пн.-пт.: 9.00-19.30; сб.:9.00-14.30; вс.: выходной</td>
+              <td>EUR, RUB, USD</td>
+              <td>Выдача наличных, Платежи</td>
+            </tr>
+            <tr>
+              <td>Качинцев ул., д. 5</td>
+              <td>пн.-пт.: 9.00-19.30; сб.:9.00-14.30; вс.: выходной</td>
+              <td>RUB</td>
+              <td>Выдача наличных, Платежи</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.wrapTable -->
+
+        <!-- /.banks__office -->
+
+      </section>
+      <!-- /.banks -->
+
+      <section class="order center">
+
+        <h2 class="blockTitle">
+          Сделать заказ:
+        </h2>
+        <!-- /.blockTitle -->
+
+        <form action="#" method = "POST" class="orderForm">
+
+          <div class="orderForm__part">
+            <input type="text"
+                   name="phio"
+                   placeholder="Ф.И.О."
+                   class="orderForm__input">
+            <!-- /.orderForm__input -->
+            <input type="text"
+                   name="phone"
+                   placeholder="Телефон"
+                   class="orderForm__input">
+            <!-- /.orderForm__input -->
+            <input type="text"
+                   name="e-mail"
+                   placeholder="E-mail"
+                   class="orderForm__input">
+            <!-- /.orderForm__input -->
+          </div>
+          <!-- /.orderForm__part -->
+
+          <div class="orderForm__part">
+            <textarea name="remark"
+                      placeholder="Примечание"
+                      class="orderForm__textarea"></textarea>
+
+            <button class="orderForm__btn">
+              Отправить
+            </button>
+            <!-- /.orderForm__btn -->
+
+            <!-- /#.orderForm__textarea -->
+          </div>
+          <!-- /.orderForm__part -->
+
+        </form>
+        <!-- /.orderForm -->
+
+
+      </section>
+      <!-- /.order -->
+
+
+    </div>
+    <!-- /.wrapMain -->
+<!--
+  END MAIN
+============================================================================-->
+
+  </div>
+  <!-- /.wrapperWithoutFooter -->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN FOOTER
+-->
+  <div class="wrapFooter">
+    <footer class="footer center">
+      <nav class="nav nav--bottom center">
+        <a href="#" class="nav__item nav__item--bottom">
+          Главная
+        </a>
+        <!-- /.nav__item nav__item-bottom -->
+        <a href="#essays" class="nav__item nav__item--bottom">
+          Текст
+        </a>
+        <!-- /.nav__item nav__item-bottom -->
+        <a href="#catalogue" class="nav__item nav__item--bottom">
+          Списки
+        </a>
+        <!-- /.nav__item nav__item-bottom -->
+        <a href="#banks" class="nav__item nav__item--bottom">
+          Таблицы
+        </a>
+        <!-- /.nav__item -->
+      </nav>
+      <!-- /.nav -->
+    </footer>
+    <!-- /.footer -->
+  </div>
+  <!-- /.wrapFooter -->
+<!--
+  END FOOTER
+============================================================================-->
+
+</div>
+<!-- /.wrapper -->
+
+
+<!-- Optimized loading JS Start -->
+<script>var scr = {
+  "scripts": [
+    {
+      "src": "js/libs.min.js",
+      "async": false
+    },
+    {
+      "src": "js/bundle.js",
+      "async": false
+    }
+  ]
+};
+!function (t, n, r) {
+  "use strict";
+  var c = function (t) {
+    if ("[object Array]" !== Object.prototype.toString.call(t))return !1;
+    for (var r = 0; r < t.length; r++) {
+      var c = n.createElement("script"), e = t[r];
+      c.src = e.src, c.async = e.async, n.body.appendChild(c)
+    }
+    return !0
+  };
+  t.addEventListener ? t.addEventListener("load", function () {
+    c(r.scripts);
+  }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+    c(r.scripts)
+  }) : t.onload = function () {
+    c(r.scripts)
+  }
+}(window, document, scr);
+</script>
+<!-- Optimized loading JS End -->
+
+</body>
+</html>
